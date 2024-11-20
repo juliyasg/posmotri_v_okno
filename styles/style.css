@@ -45,7 +45,7 @@ ol {
   flex-direction: row;
   align-items: flex-end;
   gap: 30px;
-  max-width: 1140px;
+  width: 1140px;
 }
 
 .result {
@@ -144,7 +144,7 @@ ol {
   align-items: center;
   width: 20px;
   height: 20px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   background-color: transparent;
   position: relative;
 }
@@ -157,11 +157,10 @@ ol {
   background-color: #fff;
 }
 
-.search-form__submit-button {
-  width: 194px;
+.button {
   height: 34px;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
   font-family: inherit;
   font-size: 18px;
@@ -169,6 +168,10 @@ ol {
   text-align: center;
   outline: none;
   margin-top: auto;
+}
+
+.search-form__submit-button {
+  width: 194px;
 }
 
 .content__details {
@@ -197,7 +200,7 @@ ol {
   height: 298px;
   overflow: auto;
   position: relative;
-  padding: 2px; /* чтобы была видна обводка у кнопки "показать еще" и у карточек - фокус-визибл */
+  padding: 2px; /* чтобы была видна обводка у кнопки "показать еще" и у карточек с фокус-визибл */
 }
 
 .content__list-item:not(:last-of-type) {
@@ -214,10 +217,13 @@ ol {
 .content__video-card-thumbnail {
   height: 103px;
   width: 194px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
   flex-grow: 1;
+  max-width: 200px;
 }
 
 .content__video-card-title {
@@ -225,6 +231,9 @@ ol {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -232,6 +241,7 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
+  overflow-wrap: break-word;
 }
 
 button,
@@ -241,21 +251,10 @@ button,
 }
 
 .more-button {
-  height: 34px;
   width: 100%;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
-  outline: none;
-  margin-top: auto;
 }
 
 .button:hover {
-  background-color: #545050;
   text-decoration: 1px underline;
   text-underline-offset: 3px;
 }
@@ -284,7 +283,6 @@ button,
 }
 
 .content__card-link:hover {
-  background-color: #545050;
   text-decoration: 1px underline;
   text-underline-offset: 4px;
 }
