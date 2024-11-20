@@ -79,7 +79,7 @@ ol {
 
 .search-form__fieldset-title {
   font-family: inherit;
-  font-size: 18px;
+  font-size: inherit;
   font-weight: 400;
   padding-bottom: 6px;
 }
@@ -121,9 +121,9 @@ ol {
   background-color: transparent;
   border: none;
   font-family: inherit;
-  font-size: 18px;
+  font-size: inherit;
   font-weight: 400;
-  color: #fff;
+  color: inherit;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
@@ -163,7 +163,7 @@ ol {
   border: 1px solid currentColor;
   color: #fff;
   font-family: inherit;
-  font-size: 18px;
+  font-size: inherit;
   font-weight: 700;
   text-align: center;
   outline: none;
